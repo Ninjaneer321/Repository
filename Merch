@@ -1,0 +1,30 @@
+version: '1.0'
+
+services:
+  web:
+    image: your-ecommerce-platform-image
+    ports:
+      - "80:80"
+    environment:
+      - DATABASE_URL=your-database-url
+      - PAYMENT_GATEWAY_API_KEY=your-payment-gateway-api-key
+    volumes:
+      - ./data:/var/www/html/data
+    depends_on:
+      - db
+
+  db:
+    image: postgres:latest
+    environment:
+      - POSTGRES_DB=merchandise
+      - POSTGRES_USER=your-db-user
+      - POSTGRES_PASSWORD=your-db-password
+    volumes:
+      - ./db-data:/var/lib/postgresql/data
+
+networks:
+  default:
+    driver: bridge
+
+volumes:
+  db-data:
