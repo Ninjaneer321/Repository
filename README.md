@@ -26,6 +26,6 @@
 </head>
 <body>
     <!-- Replace 'ssh://your-ssh-tunnel-url' with the actual SSH tunnel URL -->
-    <a href="ssh://your-ssh-tunnel-url">𝐼𝐵𝑀 𝒮𝒮𝐻 𝒯𝓊𝓃𝓃𝑒𝓁 𝒜𝒸𝒸𝑒𝓈𝓈 𝐿𝒾𝓃𝓀</a>
+    <a href="ssh://your-ssh-tunnel-url">🌳𝐼𝐵𝑀 𝒮𝒮𝐻 𝒯𝓊𝓃𝓃𝑒𝓁 𝒜𝒸𝒸𝑒𝓈𝓈 𝐿𝒾𝓃𝓀🏕️</a>
 </body>
 </html>
