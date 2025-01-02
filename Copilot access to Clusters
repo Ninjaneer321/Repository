@@ -39,3 +39,6 @@ jobs:
           # Add your verification commands here
           # Example:
           # npm run copilot-verify
+              - name: davidkhala/poetry-buildpack
+                uses: davidkhala/poetry-buildpack@v0
+            
