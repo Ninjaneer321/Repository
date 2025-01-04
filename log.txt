@@ -1,3 +1,13 @@
+import datetime
+
+def add_log_entry(entry):
+    with open('log.txt', 'a') as log:
+        timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        log.write(f"Log entry: {timestamp} - {entry}\n")
+
+# Example usage
+add_log_entry('Copilot log entry: Progress report on porting an engine.')
+
 # Log File
 # This file contains logs related to the repository activities.
 
