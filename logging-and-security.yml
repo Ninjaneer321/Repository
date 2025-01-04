@@ -34,24 +34,14 @@ jobs:
           # Add your security configuration checks here
           python scripts/check_security.py
 
-      - name: Make Changes
+      - name: Log and Journal Start
         run: |
-          echo "Making changes to the repository..."
-          # Add commands to make changes to the repository here
-          # Example: echo "New content" > newfile.txt
+          echo "Starting logging and journaling..."
+          echo "Log start: $(date)" >> log.txt
+          echo "Journal entry: $(date) - Logging and journaling started." >> journal.txt
 
-      - name: Commit and Push Changes
+      - name: Log and Journal Completion
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "Automated changes by GitHub Actions"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Log and Journal
-        run: |
-          echo "Logging and journaling..."
-          echo "Logged at $(date)" >> log.txt
-          echo "Journal entry: $(date) - Changes made and pushed automatically." >> journal.txt
+          echo "Completing logging and journaling..."
+          echo "Log end: $(date)" >> log.txt
+          echo "Journal entry: $(date) - Logging and journaling completed." >> journal.txt
