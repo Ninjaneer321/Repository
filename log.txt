@@ -4,6 +4,29 @@ def add_log_entry(entry):
     with open('log.txt', 'a') as log:
         timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         log.write(f"Log entry: {timestamp} - {entry}\n")
+import os
+import datetime
+import subprocess
+
+# Define the log entry
+timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+log_entry = f"Log entry: {timestamp} - Copilot log entry: Progress report on porting an engine.\n"
+
+# Append the log entry to log.txt
+with open('log.txt', 'a') as log_file:
+    log_file.write(log_entry)
+
+# Add the changes to the staging area
+subprocess.run(['git', 'add', 'log.txt'], check=True)
+
+# Commit the changes
+commit_message = f"Add log entry for {timestamp}"
+subprocess.run(['git', 'commit', '-m', commit_message], check=True)
+
+# Push the changes to the repository
+subprocess.run(['git', 'push'], check=True)
+
+print("Changes committed and pushed successfully.")
 
 # Example usage
 add_log_entry('Copilot log entry: Progress report on porting an engine.')
