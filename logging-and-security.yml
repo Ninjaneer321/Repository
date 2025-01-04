@@ -33,4 +33,3 @@ jobs:
           python scripts/check_logging.py
           # Add your security configuration checks here
           python scripts/check_security.py
-          
